@@ -1,0 +1,89 @@
+img,
+object {
+    width: inherit;
+    height: inherit;
+}
+
+html {
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+}
+
+#header {
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    width: 100%;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    text-align: left;
+}
+
+th,
+tr,
+td {
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 12pt;
+}
+
+.item {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 5px;
+    display: flex;
+    float: left;
+    height: 300px;
+    min-width: 450px;
+}
+ 
+.linkButton{
+    padding: 5px;
+    background: darkgreen;
+    color: white;
+}
+.linkButton:hover{
+    background: white;
+    color: darkgreen;
+}
+.picture {
+    width: 200px;
+    padding-right: 5px;
+}
+
+.specs,
+.detail {
+    padding-left: 5px;
+    width: 100px;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    width:100%;
+}
+
+#acknowledgements{
+    float: right;
+    background: black;
+    color: white;
+    padding:10px;
+}
+
+
+@media screen and (max-width: 1080px){
+    .item{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .item{
+        width: 96%;
+    }
+}
