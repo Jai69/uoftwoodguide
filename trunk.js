@@ -2,7 +2,6 @@ var x = document.getElementsByTagName('body');
 var t = document.getElementById('header');
 var h = t.clientHeight;
 
-
 function sortList(choice) {
 
     var i, j, item, switching, shouldswitch;
