@@ -18,7 +18,7 @@ object {
 }
 body {
     margin: 0;
-    background-image: url(graphics/bg.png);
+    background-image: url(../graphics/bg.png);
     background-repeat: repeat;
 }
 
