@@ -4,11 +4,6 @@ object {
     height: inherit;
 }
 
-html {
-    background-image: url(images/background.jpg);
-    background-repeat: no-repeat;
-}
-
 #header {
     background: black;
     color: white;
@@ -59,4 +54,10 @@ td {
 .specs,
 .detail {
     padding-left: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .item {
+        
+    }
 }
