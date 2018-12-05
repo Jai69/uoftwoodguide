@@ -9,6 +9,12 @@ var loc = [];
 var collector = [];
 var contributor = [];
 var dates = [];
+window.onload = function () {
+    if (window.innerWidth > 1000) {
+        screen = window.innerWidth - 210;
+        document.getElementsByTagName('body')[0].style = 'width:' + screen + ';'
+    }
+}
 
 function generateUniques() {
     for (var i = 0; i < trees.length; i++) {
@@ -82,7 +88,7 @@ function updateNav() {
 function popNav(s) {
     var l = [];
     for (var i = 0; i < s.length; i++) {
-        l.push('<ni onclick="loadContent(' + "'" + s[i] + "'" + ');">' + s[i] + "</ni>")
+        l.push('<ni onclick="loadContent(' + "'" + s[i] + "'" + '); menu(false);">' + s[i] + "</ni>")
     }
     var temp = l.join('');
     return document.getElementById('filter').innerHTML = temp;

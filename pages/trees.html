@@ -13,8 +13,9 @@
     <div id="header">
         <img id='title' src="../graphics/title.png"><br>
     </div>
+    <div id='menuButton' onclick='menu(true);'>Menu</div>
     <hr>
-    <div id='menuButton'></div>
+
     <nav id='navPane'>
 
         <img src='../images/uoftForestry.jpg' id='navImg'>
@@ -30,7 +31,7 @@
             <option>Date</option>
         </select>
         <div id='filter'>
-            
+
             <ni>Example 1</ni>
             <ni>Example 2</ni>
         </div>
@@ -40,5 +41,27 @@
 </body>
 <script type='text/javascript' src='myJson.js'></script>
 <script type="text/javascript" src="trunk.js"></script>
-
+<script>
+    function menu(expand) {
+        width = window.innerWidth;
+        if (width < 1000) {
+            var contents = document.getElementById('content');
+            var nav = document.getElementById('navPane');
+            switch (expand) {
+                case true:
+                    console.log('expand');
+                    nav.style = 'display:block;';
+                    contents.style = 'position: relative; left: 200px;'
+                    if (width < 500){
+                        contents.style = 'display: none;';
+                    }
+                    break;
+                case false:
+                    nav.style = 'display: none;';
+                    contents.style = 'display: table; position: relative; left: 0px;';
+                    break;
+            }
+        }
+    }
+</script>
 </html>
