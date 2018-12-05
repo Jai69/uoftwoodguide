@@ -1,25 +1,71 @@
 img,
 object {
-    width: inherit;
+    width: 200px;
     height: inherit;
 }
 
 #header {
     text-align: center;
-    background:inherit;
+    background: inherit;
     text-decoration: none;
-    padding: 10px;
     width: 100%;
     display: block;
 }
 
-#title{
+#title {
     width: 80%;
+    max-width: 500px;
 }
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    display: block;
+    background: black;
+    color: white;
+}
+
+#filter{
+    margin-top:10px;
+    margin-bottom:10px;
+    height:72%;
+    overflow: auto;
+}
+select{
+    width:100%;
+    font-size: 12pt;
+}
+#navImg {
+    width: 100%;
+    height: auto;
+    filter: invert(100%);
+}
+
+ni {
+    padding: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+ni:hover {
+    background: grey;
+}
+
+html,
 body {
     margin: 0;
+    padding: 2px;
     background-image: url(../graphics/bg.png);
     background-repeat: repeat;
+}
+
+body {
+    position: relative;
+    left: 200px;
+    width: 60%
 }
 
 a {
@@ -38,9 +84,6 @@ td {
 
 .item {
     padding-top: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: 5px;
     display: flex;
     float: left;
     height: 300px;
@@ -48,8 +91,7 @@ td {
 }
 
 .picture {
-    width: 200px;
-    padding-right: 5px;
+    clip: rect(0px, 50px, 50px, 0px);
 }
 
 .specs,
@@ -57,8 +99,12 @@ td {
     padding-left: 5px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     .item {
-        
+        width: 100%;
+    }
+    img,
+    object {
+        width: 150px;
     }
 }
