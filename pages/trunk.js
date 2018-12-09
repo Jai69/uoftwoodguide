@@ -88,7 +88,7 @@ function updateNav() {
 function popNav(s) {
     var l = [];
     for (var i = 0; i < s.length; i++) {
-        l.push('<ni onclick="loadContent(' + "'" + s[i] + "'" + '); menu(false);">' + s[i] + "</ni>")
+        l.push('<ni onclick="loadContent(' + "'" + s[i] + "'" + '); menu(false);">' + s[i] +"</ni>")
     }
     var temp = l.join('');
     return document.getElementById('filter').innerHTML = temp;
@@ -124,4 +124,4 @@ function loadContent(c) {
 
 generateUniques();
 popNav(species)
-loadContent(species[0]);
+loadContent(species[4]);
