@@ -101,7 +101,7 @@ function loadContent(c) {
         if (trees[i].Species == c || trees[i].Family == c || trees[i].Genus == c || trees[i].ComName == c || trees[i].Location == c || trees[i].Collector == c || trees[i].Contributor == c || trees[i].Date == c) {
             console.log("Match");
 
-            item.push("<div class='item'><div class='picture'><object type='image/jpeg' data ='../images/jpeg/" + trees[i].Num + (trees[i].Type).toLowerCase() + "(a).jpeg'><img src='../images/uoftForestry.jpg'></object></div>");
+            item.push("<div class='item'><div class='picture'><a href='../images/jpeg/" + trees[i].Num + (trees[i].Type).toLowerCase() + "(a).jpeg' target='_page'><object type='image/jpeg' data ='../images/jpeg/" + trees[i].Num + (trees[i].Type).toLowerCase() + "(a).jpeg'></a><img src='../images/uoftForestry.jpg'></object></div>");
             item.push("<table>");
             item.push("<tr><td class='key'>Type</td><td class='type'>" + trees[i].Type + "</td></tr>");
             item.push("<tr><td class='key'>Num</td><td class='num'>" + trees[i].Num + "</td></tr>");
